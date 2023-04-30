@@ -1,0 +1,18 @@
+<head>
+   <title>{{ post.title }}</title>
+   <link rel="stylesheet" href="{{ STATIC_URL }}/static/style.css">
+</head>
+<body class="article">
+   <div class="header">
+      <img width=560pt src="{{ STATIC_URL }}/static/logo.jpg" />
+   </div>
+   <div class="content">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <div class="article-info">
+	 <div class="article-author">{{ post.author.username }}</div>
+	 <div class="article-created-date">{{ post.created_date }}</div>
+      </div>
+      <p class="article-text">{{ post.get_excerpt }}</p>
+      <a href="/" style="background-color: rgb(128,128,128); padding: 6pt;">To all posts</a>
+   </div>
+</body>

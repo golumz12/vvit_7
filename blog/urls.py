@@ -21,6 +21,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.archive),
-    re_path(r'^article/(?P<article_id>\d+)$', views.get_article, name='get_article'), 
+    re_path(r'^article/(?P<article_id>\d+)$',
+            views.get_article, name='get_article'),
+    path('article/new', views.create_article, name='create_article'),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL)

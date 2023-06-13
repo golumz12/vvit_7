@@ -48,28 +48,29 @@ let log_students = function(students) {
 
 
 let filter_by_group = function(students, group) {
-	stud=[]; 
+	res=[]; 
 	for (let i = 0; i < students.length; i++) { 
-		if (students[i]['group']==group) { 
-			stud.push(students[i]) 
+		if (students[i]['group'] == group) { 
+			res.push(students[i]) 
 		}
 	}
-	return stud; 
+	return res; 
 };
 
-let filter_by_min_avg_grade = function(students, avg) {
-	stud=[]; 
+let filter_by_min_avg_grade = function(students, avg_target) {
+	res = []; 
 	for (let i = 0; i < students.length; i++) { 
-		let marks=students[i]['marks']; 
-		let mark_=0; 
-		for (let k = 0; k < marks.length; k++) { 
-			mark_+=marks[k]; 
+		let marks = students[i]['marks']; 
+		let avg_mark = 0; 
+		for (let j = 0; j < marks.length; j++) { 
+			avg_mark += marks[j]; 
 		}
-		if (mark_/marks.length>avg) { 
-			stud.push(students[i]) 
+                avg_mark = avg_mark / marks.length
+		if (avg_mark > avg_target) { 
+			res.push(students[i]) 
 		}
 	}
-	return stud; 
+	return res; 
 };
 
 console.log(groupmates);

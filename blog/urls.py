@@ -25,4 +25,7 @@ urlpatterns = [
             views.get_article, name='get_article'),
     path('article/new', views.create_article, name='create_article'),
     path('admin/', admin.site.urls),
+    path('register/', views.sign_up_user, name='sign_up_user'),
+    path('login/', views.sign_in_user, name='sign_in_user'),
+    path('logout/', views.sign_out_user, name='sign_out_user'),
 ] + static(settings.STATIC_URL)

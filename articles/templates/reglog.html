@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         {{ content.title }}
+      </title>
+      <link rel="stylesheet" href="{{ STATIC_URL }}/static/style.css">
+   </head>
+   <body>
+      <div class="centered-content">
+         <div class="visual-box light-bg slightly-down">
+	    <h1 class="centered-text">
+               {{ content.header }}
+            </h1>
+	    <form method="POST">{% csrf_token %}
+	       <input type="text" name="username" placeholder="Username" value="{{ form.title }}">
+               <br>
+               {% if content.email_field %}
+	       <input type="text" name="email" placeholder="Email" value="{{ form.title }}">
+               <br>
+               {% endif %}
+	       <input type="text" name="password" placeholder="Password" value="{{ form.title }}">
+               <br>
+	       <input type="submit" value="{{ content.action }}">
+	    </form>
+	    {{ form.errors }}
+         </div>
+      </div>
+   </body>
+</html>

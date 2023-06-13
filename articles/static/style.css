@@ -4,6 +4,7 @@
    color: #ffffff;
    font-family: Tahoma, Arial, sans-serif; 
 }
+
 .archive {
    background: #1abc9c;
    width: 960px; 
@@ -31,8 +32,6 @@
    text-decoration: underline;
 }
 
-   
-
 .article-author { 
    width: 50%; 
    float: left;
@@ -47,3 +46,53 @@
    padding: 5%;
 }
 
+
+input, textarea {
+   margin: 6pt;
+   padding: 3pt;
+   width: 80%;
+   font-size: 16pt;
+}
+
+textarea {
+   height: 5cm;
+}
+
+.centered-content {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+
+.centered-text {
+   text-align: center;
+}
+
+.visual-box {
+   border: solid;
+   padding: 4pt;
+}
+
+.slightly-down {
+   margin-top: 5cm;
+}
+
+.light-bg {
+   background: rgba(192, 192, 192, 256);
+}
+
+.dark-bg {
+   background: rgba(128, 128, 128, 256)
+}
+
+.panel {
+   padding: 4px;
+   text-align: right;
+   background: #a0a0a0;
+   font-size: 24pt;
+}
+
+.button {
+   padding: 3pt;
+   border: solid 2px white;
+   background: grey;

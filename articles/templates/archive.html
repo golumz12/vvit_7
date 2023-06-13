@@ -7,18 +7,16 @@
       <img width=560pt src="{{ STATIC_URL }}/static/logo.jpg" />
    </div>
    <div class="panel">
-      {% if request.user.is_authenticated %}
       <p>
+      {% if request.user.is_authenticated %}
          {{ request.user.username }}
          <a class="button" href="/article/new">Create post</a>
          <a class="button" href="/logout">Log out</a>
-      </p>
       {% else %}
-      <p>
          <a class="button" href="/login">Sign in</a>
          <a class="button" href="/register">Sign up</a>
-      </p>
       {% endif %}
+      </p>
    </div>
    <div class="content">
 
@@ -27,6 +25,7 @@
 	    <a href="article/{{ post.id }}" class="post-title">
 	       <h2 class="post-title">{{ post.title }}</h2>
 	    </a>
+            <button class="fold-button button">Fold</button>
 	    <div class="article-info">
 	       <div class="article-author">{{ post.author.username }}</div>
 	       <div class="article-created-date">{{ post.created_date }}</div>
@@ -35,4 +34,6 @@
 	 </div>
       {% endfor %}
    </div>
+   <script src="{{ STATIC_URL }}/static/helloworld.js"></script>
+   <script src="{{ STATIC_URL }}/static/posts_folding.js"></script>
 </body>

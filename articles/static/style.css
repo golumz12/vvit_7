@@ -1,8 +1,11 @@
+body {
+   font-family: Tahoma, Arial, sans-serif; 
+}
+
 .archive, .article {
    margin-left: auto;
    margin-right: auto;
    color: #ffffff;
-   font-family: Tahoma, Arial, sans-serif; 
 }
 
 .archive {
@@ -46,6 +49,9 @@
    padding: 5%;
 }
 
+.one-post {
+   margin-bottom: 1.5cm;
+}
 
 input, textarea {
    margin: 6pt;
@@ -96,3 +102,15 @@ textarea {
    padding: 3pt;
    border: solid 2px white;
    background: grey;
+}
+
+.one-post.folded .article-info, .one-post.folded .article-text {
+   display: none;
+}
+
+.fold-button {
+   padding: 2pt;
+   margin-bottom: 6pt;
+   color: white;
+   font-size: 12pt;
+}
